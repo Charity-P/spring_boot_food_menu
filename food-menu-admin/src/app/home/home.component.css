@@ -1,0 +1,16 @@
+h1 {
+  text-align: center;
+  color: #4CAF50;
+}
+
+p {
+  text-align: center;
+  font-size: 1.2em;
+}
+
+button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 1em;
+}

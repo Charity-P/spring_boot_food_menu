@@ -1,0 +1,26 @@
+<div class="container">
+  <h2>Select a Meal Type</h2>
+  <select (change)="onMealTypeSelected($event)">
+    <option value="" disabled selected>Choose from</option> <!-- Default option -->
+    <option *ngFor="let mealType of mealTypes" [value]="mealType.id">
+      {{ mealType.name }}
+    </option>
+  </select>
+
+  <div *ngIf="selectedMealType" class="meal-details">
+    <h3>Selected Meal Type Details:</h3>
+    <p><strong>Name:</strong> {{ selectedMealType.name }}</p>
+    <p><strong>Menus:</strong>
+    <ul class="menu-list">
+      <li *ngFor="let menu of selectedMealType.menus" class="menu-item">
+        <h5>{{ menu.name }}</h5>
+        <p>{{ menu.dishes }}</p>
+      </li>
+    </ul>
+
+  </div>
+
+  <div *ngIf="!mealTypes.length" class="loading">
+    <p>Loading meal types...</p>
+  </div>
+</div>

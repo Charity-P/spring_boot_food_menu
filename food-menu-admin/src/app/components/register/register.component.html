@@ -1,0 +1,32 @@
+<div class="register-container">
+  <h2>Register</h2>
+  <form (ngSubmit)="onRegister()">
+    <div class="input-group">
+      <label for="fullName">Full Name</label>
+      <input pInputText type="text" id="fullName" [(ngModel)]="fullName" name="fullName" placeholder="Enter Full Name" required />
+    </div>
+
+    <div class="input-group">
+      <label for="email">Email</label>
+      <input pInputText type="email" id="email" [(ngModel)]="email" name="email" placeholder="Enter Email" required />
+    </div>
+
+    <div class="input-group">
+      <label for="username">Username</label>
+      <input pInputText type="text" id="username" [(ngModel)]="username" name="username" placeholder="Enter Username" required />
+    </div>
+
+    <div class="input-group">
+      <label for="password">Password</label>
+      <input pInputText type="password" id="password" [(ngModel)]="password" name="password" placeholder="Enter Password" required />
+    </div>
+
+    <button pButton type="submit" class="register-btn" label="Register"></button>
+
+    <div class="already-account">
+      <span>Already have an account? <a routerLink="/login">Login</a></span>
+    </div>
+  </form>
+
+  <p-message *ngIf="errorMessage" severity="error" text="{{ errorMessage }}"></p-message>
+</div>

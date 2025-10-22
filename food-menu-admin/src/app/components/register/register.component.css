@@ -1,0 +1,88 @@
+.register-container {
+  max-width: 350px;
+  margin: auto;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #444;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  color: #333;
+}
+
+/* ✅ Make Placeholder Text Less Bright */
+input::placeholder {
+  color: #aaa;  /* Light gray color */
+  font-style: italic;
+}
+
+/* ✅ Disappear Placeholder When User Clicks */
+input:focus::placeholder {
+  color: transparent;
+}
+
+input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5);
+}
+
+.register-btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 18px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.register-btn:hover {
+  background-color: #0056b3;
+}
+
+.already-account, .not-registered {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #333;
+}
+
+.already-account a, .not-registered a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.already-account a:hover, .not-registered a:hover {
+  text-decoration: underline;
+}
+

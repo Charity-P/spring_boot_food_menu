@@ -1,0 +1,20 @@
+<div class="meal-container">
+  <h2>{{ mealType?.name }}</h2>
+  <p><strong>Description:</strong> {{ mealType?.name }}</p>
+
+  <h3>For {{ mealType?.name }} today, you can have either of the two: </h3>
+  <ul class="menu-list">
+    <li *ngFor="let menu of suggestedMenus" class="menu-item">
+      <strong>{{ menu.name }}</strong>
+      <ul class="dish-list">
+        <li *ngFor="let dish of menu.dishes" class="dish-item">
+          {{ dish.name }}
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<div *ngIf="!mealType" class="loading-message">
+  <p>Loading meal type details...</p>
+</div>

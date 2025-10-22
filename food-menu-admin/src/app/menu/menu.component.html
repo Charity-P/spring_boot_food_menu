@@ -1,0 +1,19 @@
+<div class="container">
+  <h1>Suggested Menu for Meal Type: {{ mealTypeId }}</h1>
+
+  <div *ngIf="menus.length > 0; else noMenu">
+    <div *ngFor="let menu of menus" class="menu">
+      <h2>{{ menu.name }}</h2>
+      <p>List of Dishes:</p>
+      <ul>
+        <li *ngFor="let dish of menu.dishes">
+          {{ dish.name }}
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <ng-template #noMenu>
+    <p>No menu suggestions available for this meal type.</p>
+  </ng-template>
+</div>

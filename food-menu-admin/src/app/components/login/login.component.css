@@ -1,0 +1,100 @@
+.login-container {
+  max-width: 350px;
+  margin: auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px; /* Increased spacing between input fields */
+}
+
+.input-group label {
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #333;
+}
+
+input[pInputText] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* ✅ Make Placeholder Text Less Bright */
+input::placeholder {
+  color: #aaa;  /* Light gray color */
+  font-style: italic;
+}
+
+/* ✅ Disappear Placeholder When User Clicks */
+input:focus::placeholder {
+  color: transparent;
+}
+
+.options-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px; /* Space before the login button */
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  color: black; /* Non-bold text */
+}
+
+.remember-me input {
+  margin-right: 5px;
+  width: 14px;
+  height: 14px;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff !important;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.forgot-password {
+  text-align: right;
+  margin-top: 10px; /* Space after login button */
+}
+
+.forgot-password a {
+  font-size: 12px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.forgot-password a:hover {
+  text-decoration: underline;
+}
+
+.already-account, .not-registered {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #333;
+}
+
+.already-account a, .not-registered a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.already-account a:hover, .not-registered a:hover {
+  text-decoration: underline;
+}

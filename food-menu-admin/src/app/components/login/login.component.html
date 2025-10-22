@@ -1,0 +1,33 @@
+<div class="login-container">
+  <h2>Login</h2>
+  <form (ngSubmit)="onLogin()">
+    <div class="input-group">
+      <label for="username">Username</label>
+      <input pInputText type="text" id="username" [(ngModel)]="username" name="username" placeholder="Enter Username" required />
+    </div>
+
+    <div class="input-group">
+      <label for="password">Password</label>
+      <input pInputText type="password" id="password" [(ngModel)]="password" name="password" placeholder="Enter Password" required />
+    </div>
+
+    <div class="options-container">
+      <div class="remember-me">
+        <input type="checkbox" id="rememberMe" [(ngModel)]="rememberMe" name="rememberMe" />
+        <label for="rememberMe">Remember Me</label>
+      </div>
+    </div>
+
+    <button pButton type="submit" class="login-btn" label="Login" [disabled]="isValidLogin()"></button>
+
+    <div class="forgot-password">
+      <a routerLink="/password-reset">Forgot Password?</a>
+    </div>
+
+    <div class="not-registered">
+      <span>Not registered yet? <a routerLink="/register">Register</a></span>
+    </div>
+  </form>
+
+  <p-message *ngIf="errorMessage" severity="error" text="{{ errorMessage }}"></p-message>
+</div>

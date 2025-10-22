@@ -31,3 +31,28 @@ build/
 
 ### VS Code ###
 .vscode/
+
+# === Java / Spring Boot ===
+*.class
+*.jar
+*.war
+*.iml
+.idea/
+*.log
+
+# Environment & sensitive configs
+application.properties
+application.yml
+.env
+
+# === Node / Angular ===
+node_modules/
+dist/
+.angular/
+coverage/
+*.env
+package-lock.json
+
+# === OS / IDE files ===
+.DS_Store
+Thumbs.db
